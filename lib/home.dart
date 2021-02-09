@@ -16,11 +16,11 @@ class HomePage extends StatelessWidget {
           ),
           onPressed: () {},
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.lightBlue,
         title: Text(
           'Permana Food',
           style: TextStyle(
-              color: Colors.black,
+              color: Colors.white,
               fontFamily: 'Poppins',
               fontWeight: FontWeight.bold),
         ),
@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: Icon(
               Icons.search,
-              color: Colors.black,
+              color: Colors.white,
             ),
             onPressed: () {},
           )

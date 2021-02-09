@@ -10,12 +10,12 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
-        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: Colors.lightBlue,
         title: Text(
           foodEntity.nama,
           style: TextStyle(
-              color: Colors.black,
+              color: Colors.white,
               fontFamily: 'Poppins',
               fontWeight: FontWeight.bold),
         ),
