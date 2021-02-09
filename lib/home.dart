@@ -2,73 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_food_delivery/entity/food_entity.dart';
 import 'package:flutter_food_delivery/detail.dart';
 
-var foodEntity = [
-  FoodEntity(
-      imageAsset: 'images/steakwagyu.webp',
-      nama: 'Steak Wagyu',
-      harga: '120.000',
-      rating: '4.9',
-      deskripsi:
-      ''),
-  FoodEntity(
-      imageAsset: 'images/igabakar.webp',
-      nama: 'Iga Bakar',
-      harga: '120.000',
-      rating: '4.9',
-      deskripsi:
-      ''),
-  FoodEntity(
-      imageAsset: 'images/ayamgeprek.webp',
-      nama: 'Ayam Geprek',
-      harga: '120.000',
-      rating: '4.9',
-      deskripsi:
-      ''),
-  FoodEntity(
-      imageAsset: 'images/bakso.webp',
-      nama: 'Bakso Sapi',
-      harga: '120.000',
-      rating: '4.9',
-      deskripsi:
-      ''),
-  FoodEntity(
-      imageAsset: 'images/pizza.webp',
-      nama: 'Pizza',
-      harga: '120.000',
-      rating: '4.9',
-      deskripsi:
-      ''),
-  FoodEntity(
-      imageAsset: 'images/burger.webp',
-      nama: 'Beef Burger',
-      harga: '120.000',
-      rating: '4.9',
-      deskripsi:
-      ''),
-  FoodEntity(
-      imageAsset: 'images/bakmi.webp',
-      nama: 'Bakmi Ayam',
-      harga: '120.000',
-      rating: '4.9',
-      deskripsi:
-      ''),
-  FoodEntity(
-      imageAsset: 'images/kopisusu.webp',
-      nama: 'Kopi Susu Gula Aren',
-      harga: '120.000',
-      rating: '4.9',
-      deskripsi:
-      ''),
-  FoodEntity(
-      imageAsset: 'images/thaitea.webp',
-      nama: 'Thai Tea',
-      harga: '120.000',
-      rating: '4.9',
-      deskripsi:
-      ''),
-];
-
-class HomeScreen extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,7 +21,7 @@ class HomeScreen extends StatelessWidget {
           'Permana Food',
           style: TextStyle(
               color: Colors.black,
-              fontFamily: 'Dancing',
+              fontFamily: 'Poppins',
               fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -130,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                          return DetailScreen(foodEntity: food);
+                          return DetailPage(foodEntity: food);
                         }));
                   },
                   child: Card(
@@ -160,7 +94,7 @@ class HomeScreen extends StatelessWidget {
                                     TextStyle(fontWeight: FontWeight.bold),
                                   ),
                                   Text(
-                                    '\Rp' + food.harga,
+                                    '\Rp ' + food.harga,
                                     style:
                                     TextStyle(fontWeight: FontWeight.bold),
                                   ),
@@ -197,7 +131,7 @@ class HomeScreen extends StatelessWidget {
                                           padding: EdgeInsets.all(6),
                                           color: Colors.greenAccent,
                                           child: Text(
-                                            'Free Delivery',
+                                            'Gratis Antar',
                                             style:
                                             TextStyle(color: Colors.green),
                                           ),
@@ -212,7 +146,7 @@ class HomeScreen extends StatelessWidget {
                                           padding: EdgeInsets.all(6),
                                           color: Colors.red[200],
                                           child: Text(
-                                            'Instant Booking',
+                                            'Promo',
                                             style: TextStyle(color: Colors.red),
                                           ),
                                         ),
@@ -249,6 +183,7 @@ class _BookmarkState extends State<Bookmark> {
   Widget build(BuildContext context) {
     return IconButton(
       icon: Icon(isBookmark ? Icons.favorite : Icons.favorite_border),
+        color: Colors.red,
       onPressed: () {
         setState(() {
           isBookmark = !isBookmark;
@@ -257,3 +192,69 @@ class _BookmarkState extends State<Bookmark> {
     );
   }
 }
+
+var foodEntity = [
+  FoodEntity(
+      imageAsset: 'images/steakwagyu.jpg',
+      nama: 'Steak Wagyu',
+      harga: '120.000',
+      rating: '4.9',
+      deskripsi:
+      'Wagyu itu asal katanya dari Wa=Jepang dan Gyu=Daging Sapi.  Di beberapa daerah di Jepang, daging diberi nama sesuai wilayah produksinya, contohnya daging Kobe, Mishima, Matsusaka, Ōmi, dan Sanda. Wagyu memiliki kecenderungan genetik berupa pemarmeran (marbling) tinggi dan memproduksi lemak tak jenuh berminyak dalam jumlah besar. Sapi wagyu terkenal karena pola marmer pada dagingnya dan kualitasnya.Kecenderungan genetik sapi ras Wagyu menghasilkan daging dengan kandungan asam lemak omega-3 dan omega-6 yang lebih tinggi daripada daging sapi pada umumnya. Pemarmeran / marbling (MB) terus-menerus juga memperbaiki rasio lemak tak jenuh tunggal dan lemak jenuh.'),
+  FoodEntity(
+      imageAsset: 'images/igabakar.jpg',
+      nama: 'Iga Bakar',
+      harga: '40.000',
+      rating: '4.7',
+      deskripsi:
+      'Iga bakar dengan paduan rempah cokelat yang empuk sangat nikmat jadi menu makan siang dan malam. Paling cocok dijodohkan dengan nasi putih hangat dan juga sambal. Kalau mau lebih kenyang dan sehat, iga bakar juga enak dipadu dengan tumis sayuran yang kaya serat.'),
+  FoodEntity(
+      imageAsset: 'images/ayamgeprek.jpg',
+      nama: 'Ayam Geprek',
+      harga: '15.000',
+      rating: '4.7',
+      deskripsi:
+      'Ayam goreng tepung bumbu ala KFC yang digeprek dengan sambal bawang pedas yang bikin nagih. Tersedia level 1-5'),
+  FoodEntity(
+      imageAsset: 'images/bakso.jpg',
+      nama: 'Bakso Sapi',
+      harga: '12.000',
+      rating: '4.9',
+      deskripsi:
+      'Bakso sapi dinikmati dengan kuah kaldu gurih yang sangat lezat.'),
+  FoodEntity(
+      imageAsset: 'images/pizza.jpg',
+      nama: 'Pizza',
+      harga: '80.000',
+      rating: '4.5',
+      deskripsi:
+      'Pizza pipih yang di atasnya diberi topping saus tomat dan keju, lalu dipanggang di dalam oven. Dilengkapi dengan topping sayuran, daging, dan bumbu.'),
+  FoodEntity(
+      imageAsset: 'images/burger.jpg',
+      nama: 'Beef Burger',
+      harga: '120.000',
+      rating: '4.9',
+      deskripsi:
+      'Dengan patty yang lembut dan daging yang lezat ditambah keju berlapis-lapis, siapa sangka burger ini akan menjadi menu terfavorit.'),
+  FoodEntity(
+      imageAsset: 'images/bakmi.jpg',
+      nama: 'Bakmi Ayam',
+      harga: '120.000',
+      rating: '4.9',
+      deskripsi:
+      'Pastinya bikin keluarga ogah beranjak dari meja makan saking enaknya!'),
+  FoodEntity(
+      imageAsset: 'images/kopisusu.jpg',
+      nama: 'Kopi Susu Gula Aren',
+      harga: '120.000',
+      rating: '4.9',
+      deskripsi:
+      'Terdiri dari campuran kopi dan susu ditambah gula aren.'),
+  FoodEntity(
+      imageAsset: 'images/thaitea.jpg',
+      nama: 'Thai Tea',
+      harga: '120.000',
+      rating: '4.9',
+      deskripsi:
+      'Teh ala Thailand yang bikin segeerrrr!'),
+];

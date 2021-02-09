@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Permana Food',
       theme: ThemeData(fontFamily: 'Poppins'),
-      home: HomeScreen(),
+      home: HomePage(),
     );
   }
 }
