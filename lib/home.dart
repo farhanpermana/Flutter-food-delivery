@@ -219,7 +219,7 @@ var foodEntity = [
       imageAsset: 'images/bakso.jpg',
       nama: 'Bakso Sapi',
       harga: '12.000',
-      rating: '4.9',
+      rating: '4.6',
       deskripsi:
       'Bakso sapi dinikmati dengan kuah kaldu gurih yang sangat lezat.'),
   FoodEntity(
@@ -232,28 +232,28 @@ var foodEntity = [
   FoodEntity(
       imageAsset: 'images/burger.jpg',
       nama: 'Beef Burger',
-      harga: '120.000',
+      harga: '35.000',
       rating: '4.9',
       deskripsi:
       'Dengan patty yang lembut dan daging yang lezat ditambah keju berlapis-lapis, siapa sangka burger ini akan menjadi menu terfavorit.'),
   FoodEntity(
       imageAsset: 'images/bakmi.jpg',
       nama: 'Bakmi Ayam',
-      harga: '120.000',
+      harga: '12.000',
       rating: '4.9',
       deskripsi:
       'Pastinya bikin keluarga ogah beranjak dari meja makan saking enaknya!'),
   FoodEntity(
       imageAsset: 'images/kopisusu.jpg',
       nama: 'Kopi Susu Gula Aren',
-      harga: '120.000',
+      harga: '15.000',
       rating: '4.9',
       deskripsi:
       'Terdiri dari campuran kopi dan susu ditambah gula aren.'),
   FoodEntity(
       imageAsset: 'images/thaitea.jpg',
       nama: 'Thai Tea',
-      harga: '120.000',
+      harga: '15.000',
       rating: '4.9',
       deskripsi:
       'Teh ala Thailand yang bikin segeerrrr!'),
